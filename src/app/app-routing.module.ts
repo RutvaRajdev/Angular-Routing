@@ -14,8 +14,10 @@ const routes: Route[] = [
     path: 'settings',
     component: SettingsComponent,
     children: [
+      {path: '', redirectTo: 'profile', pathMatch: 'full'},
       {path: 'profile', component: SettingsProfileComponent},
-      {path: 'contact', component: SettingsContactComponent}
+      {path: 'contact', component: SettingsContactComponent},
+      {path: '**', redirectTo: 'profile', pathMatch: 'full'}
     ]
   },
   {path: '**', component: PageNotFoundComponent}
