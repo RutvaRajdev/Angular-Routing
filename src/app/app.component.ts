@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Routing';
+
+  routes = [
+    {linkName: 'Home', url: 'home'},
+    {linkName: 'Settings', url: 'settings'}
+  ];
 }
